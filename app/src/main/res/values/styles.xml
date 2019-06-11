@@ -18,14 +18,15 @@
     </style>
 
     <style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-
         <item name="android:fontFamily">@font/amaticsc_bold</item>
         <item name="android:textSize">30sp</item>
         <item name="colorPrimary">@color/DarkRed</item>
         <item name="colorPrimaryDark">@color/DarkRed</item>
+        <item name="android:colorPrimaryDark">@color/DarkRed</item>
         <item name="colorAccent">@color/DarkRed</item>
         <item name="actionMenuTextAppearance">@style/Toolbar.TitleText
         </item>
+        <item name="colorControlNormal">@color/white</item>
     </style>
 
     <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">

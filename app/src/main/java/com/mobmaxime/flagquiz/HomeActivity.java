@@ -1,15 +1,13 @@
 package com.mobmaxime.flagquiz;
-
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
@@ -17,13 +15,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        //getActionBar().setCustomView(R.layout.actionbar_home);
         setContentView(R.layout.activity_home);
-        //getActionBar().setTitle("GAME");
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.DarkRed)); // Navigation bar the soft bottom of some phones like nexus and some Samsung note series
+            getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.DarkRed)); //status bar or the time bar at the top
+        }
 
         init();
-
     }
 
     private void init() {

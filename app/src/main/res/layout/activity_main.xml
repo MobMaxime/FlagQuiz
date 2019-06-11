@@ -7,6 +7,34 @@
     android:gravity="center_horizontal"
     android:orientation="vertical" >
 
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/BaseAppTheme">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaticsc_bold"
+                android:text="@string/title_activity_home"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textSize="36dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
     <!--<TextView-->
         <!--android:id="@+id/titleTextView"-->
         <!--android:layout_width="match_parent"-->
@@ -19,77 +47,77 @@
         <!--android:fontFamily="@font/amaticsc_bold"-->
         <!--android:textFontWeight="40"></TextView>-->
 
-    <TextView
-        android:id="@+id/questionNumberTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/amaticsc_bold"
-        android:gravity="center"
-        android:textColor="@color/text_color"
-        android:textSize="@dimen/title_size"></TextView>
-
-    <ImageView
-        android:id="@+id/flagImageView"
-        android:layout_width="@dimen/flag_width"
-        android:layout_height="@dimen/flag_height"
-        android:adjustViewBounds="false" >
-    </ImageView>
-
-    <TextView
-        android:id="@+id/guessCountryTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/guess_country"
-        android:textColor="@color/text_color"
-        android:textSize="@dimen/text_size"
-        android:fontFamily="@font/amaticsc_bold"
-        android:textFontWeight="30dp">
-    </TextView>
-
-    <TableLayout
-        android:id="@+id/buttonTableLayout"
-        android:layout_width="match_parent"
-        android:layout_height="353dp"
-        android:layout_weight="1"
-        android:stretchColumns="0,1,2"
-        >
-
-        <TableRow
-            android:id="@+id/tableRow0"
+        <TextView
+            android:id="@+id/questionNumberTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            ></TableRow>
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/amaticsc_bold"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/title_size"></TextView>
 
-        <TableRow
-            android:id="@+id/tableRow1"
+        <ImageView
+            android:id="@+id/flagImageView"
+            android:layout_width="@dimen/flag_width"
+            android:layout_height="@dimen/flag_height"
+            android:adjustViewBounds="false" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/guessCountryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/guess_country"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size"
+            android:fontFamily="@font/amaticsc_bold"
+            android:textFontWeight="30dp">
+        </TextView>
+
+        <TableLayout
+            android:id="@+id/buttonTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="353dp"
+            android:layout_weight="1"
+            android:stretchColumns="0,1,2"
+            >
+
+            <TableRow
+                android:id="@+id/tableRow0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                ></TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:fontFamily="@font/amaticsc_bold"></TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:fontFamily="@font/amaticsc_bold"></TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/answerTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:fontFamily="@font/amaticsc_bold"></TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:fontFamily="@font/amaticsc_bold"></TableRow>
-    </TableLayout>
-
-    <TextView
-        android:id="@+id/answerTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="@dimen/answer_size"
-        android:fontFamily="@font/amaticsc_bold"
-        android:textFontWeight="1000dp"
-        ></TextView>
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/answer_size"
+            android:fontFamily="@font/amaticsc_bold"
+            android:textFontWeight="1000dp"></TextView>
+    </LinearLayout>
 
 </LinearLayout>
